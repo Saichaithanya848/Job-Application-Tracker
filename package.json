@@ -1,0 +1,29 @@
+{
+  "name": "job-application-tracker",
+  "version": "1.0.0",
+  "description": "Full-stack MERN Job Application Tracker web application",
+  "private": true,
+  "scripts": {
+    "install:all": "npm.cmd --prefix backend install && npm.cmd --prefix frontend install",
+    "server": "npm.cmd --prefix backend run dev",
+    "client": "npm.cmd --prefix frontend run dev",
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"blue,green\" \"npm.cmd --prefix backend run dev\" \"npm.cmd --prefix frontend run dev\"",
+    "start": "npm.cmd --prefix backend start",
+    "test": "npm.cmd --prefix backend test",
+    "seed": "npm.cmd --prefix backend run seed",
+    "build": "npm.cmd --prefix frontend run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "keywords": [
+    "mern",
+    "job-tracker",
+    "react",
+    "express",
+    "mongodb",
+    "nodejs"
+  ],
+  "author": "Chaitanya",
+  "license": "MIT"
+}
